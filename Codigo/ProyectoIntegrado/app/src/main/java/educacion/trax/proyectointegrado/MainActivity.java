@@ -118,14 +118,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Usuario usuario=new Usuario(nom,email);
+                            Usuario usuario=new Usuario(email,nom);
                             Toast.makeText(MainActivity.this, "Creación Correcta.",
                                     Toast.LENGTH_SHORT).show();
                             String key= user.getUid();
                            bbdd.child(key).setValue(usuario);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(MainActivity.this, "Ha habido un error, compruebe que la contraseña tenga mas de 6 caracteres.",
+                            Toast.makeText(MainActivity.this, "Ha habido un error, compruebe que ha introducido los datos correctamente.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
