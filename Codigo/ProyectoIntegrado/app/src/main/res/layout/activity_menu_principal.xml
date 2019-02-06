@@ -22,5 +22,10 @@
         android:layout_height="wrap_content"
         android:text="Opciones"
         android:id="@+id/buttonOpciones"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:id="@+id/buttonSalirMenuPrincipal"/>
 
 </LinearLayout>
