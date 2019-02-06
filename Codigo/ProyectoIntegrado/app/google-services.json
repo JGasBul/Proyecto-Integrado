@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "605810466813",
+    "firebase_url": "https://arenabbdd.firebaseio.com",
+    "project_id": "arenabbdd",
+    "storage_bucket": "arenabbdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605810466813:android:5c38130bc6308941",
+        "android_client_info": {
+          "package_name": "educacion.trax.proyectointegrado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605810466813-gulp3re7581tsnakoijaqiaeoapambfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "educacion.trax.proyectointegrado",
+            "certificate_hash": "b880714bbc24e15fdd357a83db0cf6e7c7bf6162"
+          }
+        },
+        {
+          "client_id": "605810466813-fq8joprobm3hmsk22j1m1uk8hrtt38ok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlAPk4yQt-HMLcngee_FmejLCIF4iFFyE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605810466813-fq8joprobm3hmsk22j1m1uk8hrtt38ok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
