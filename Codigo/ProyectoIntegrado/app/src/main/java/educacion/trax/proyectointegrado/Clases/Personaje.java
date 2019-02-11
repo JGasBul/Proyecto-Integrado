@@ -1,28 +1,85 @@
 package educacion.trax.proyectointegrado.Clases;
 
-public class Personaje {
-private String clase;
+public class Personaje{
+
+private String nombre;
+private int vida;
+private int daño;
+private int armadura;
+private int clase;
 private Integer dinero;
 private Integer fase;
 private Integer fase_max;
 private Integer ronda;
 private Objetos obj;
 
-    public Personaje(String clase, Integer dinero, Integer fase, Integer fase_max, Integer ronda) {
+    public Personaje(int clase,String nombre) {
+        this.nombre=nombre;
         this.clase = clase;
-        this.dinero = dinero;
-        this.fase = fase;
-        this.fase_max = fase_max;
-        this.ronda = ronda;
+        this.vida=100;
+        switch (this.clase){
+            case 0: {
+                this.daño = 10;
+                this.armadura = 10;
+            }break;
+            case 1:{
+                this.daño=20;
+                this.armadura=0;
+            }break;
+            case 2:{
+                this.daño=5;
+                this.armadura=20;
+            }break;
+            default:{
+                this.daño = 10;
+                this.armadura = 10;
+            }
+        }
+        this.dinero = 0;
+        this.fase = 0;
+        this.fase_max = 0;
+        this.ronda = 0;
         Objetos obj=new Objetos(0,0,0);
         this.obj = obj;
     }
 
-    public String getClase() {
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public int getDaño() {
+        return daño;
+    }
+
+    public void setDaño(int daño) {
+        this.daño = daño;
+    }
+
+    public int getArmadura() {
+        return armadura;
+    }
+
+    public void setArmadura(int armadura) {
+        this.armadura = armadura;
+    }
+
+    public int getClase() {
         return clase;
     }
 
-    public void setClase(String clase) {
+    public void setClase(int clase) {
         this.clase = clase;
     }
 
