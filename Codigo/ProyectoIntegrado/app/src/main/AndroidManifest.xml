@@ -17,7 +17,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuPrincipal" />
-        <activity android:name=".NuevoPersonaje"></activity>
+        <activity android:name=".NuevoPersonaje" />
+        <activity android:name=".Elegir_Personaje" />
+        <activity
+            android:name=".menu_Arena"
+            android:screenOrientation="landscape" />
+        <activity android:name=".tienda"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".battle"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

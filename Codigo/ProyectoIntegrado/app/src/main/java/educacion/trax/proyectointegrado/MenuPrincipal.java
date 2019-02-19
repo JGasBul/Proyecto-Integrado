@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuPrincipal extends AppCompatActivity implements View.OnClickListener {
-    Button botonJugar,botonNuevaPartida,botonOpciones,botonSalir;
+   private Button botonJugar,botonNuevaPartida,botonOpciones,botonSalir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -16,45 +16,32 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
 
         botonJugar = (Button)findViewById(R.id.buttonJugar);
-        botonOpciones=(Button)findViewById(R.id.buttonOpciones);
-        botonSalir=(Button)findViewById(R.id.buttonSalirMenuPrincipal);
-        botonNuevaPartida=(Button)findViewById(R.id.buttonNuevaPartida);
-
         botonJugar.setOnClickListener(this);
+        botonOpciones=(Button)findViewById(R.id.buttonOpciones);
         botonOpciones.setOnClickListener(this);
+        botonSalir=(Button)findViewById(R.id.buttonSalirMenuPrincipal);
         botonSalir.setOnClickListener(this);
+        botonNuevaPartida=(Button)findViewById(R.id.buttonNuevaPartida);
         botonNuevaPartida.setOnClickListener(this);
-
-
     }
-
     @Override
     public void onClick(View v) {
         Intent i;
         if (v.getId()==R.id.buttonJugar){
-            i = new Intent(this,NuevoPersonaje.class);
+            i = new Intent(this,Elegir_Personaje.class);
+            startActivity(i);
+
         }
         if (v.getId()==R.id.buttonNuevaPartida){
-            i = new Intent();
+            i = new Intent(this,NuevoPersonaje.class);
+            startActivity(i);
         }
         if (v.getId()==R.id.buttonOpciones){
             i = new Intent();
         }
-        if (v.getId()==R.id.buttonNuevaPartida){
-            i = new Intent();
+        if (v.getId()==R.id.buttonSalirMenuPrincipal){
+            finishAffinity();
+            System.exit(0);
         }
-/*
-        if(v.getId()==botonJugar.getId()){
-            i = new Intent();
-        }else if(v.getId()==botonNuevaPartida.getId()){
-            i = new Intent();
-        }else if(v.getId()==botonOpciones.getId()){
-            i = new Intent();
-
-
-        }else if(v.getId()==botonSalir.getId()){
-            finish();
-        }
-        */
     }
 }

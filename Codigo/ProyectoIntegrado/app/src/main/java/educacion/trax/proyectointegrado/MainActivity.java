@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                            bbdd.child(key).setValue(usuario);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(MainActivity.this, "Ha habido un error, compruebe que ha introducido los datos correctamente.",
+                            Toast.makeText(MainActivity.this, "Ha habido un error, compruebe que ha introducido los datos correctamente."+task.getException(),
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
